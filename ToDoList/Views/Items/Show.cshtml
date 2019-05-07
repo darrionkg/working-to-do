@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>To Do List</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>To Do List</h1>
+      <em>You can find more details about the to do item here.</em>
+    </div>
+    <h3>@Model["item"].GetDescription()</h3>
+    <h3>Category: @Model["category"].GetName()</h3>
+    <h3>Due Date: @Model["item"].GetDueDate()</h3>
+    <a href="/categories/@Model["category"].GetId()/items/new" class="btn btn-dark">Add another item</a>
+    <a href="/categories" class="btn btn-dark">View all categories</a>
+  </div>
+</body>
+</html>
