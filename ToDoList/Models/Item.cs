@@ -36,14 +36,13 @@ namespace ToDoList.Models
 
     public int GetId()
     {
-      // Temporarily returning dummy id to get beyond compiler errors, until we refactor to work with database.
-      // return 0;
       return _id;
     }
 
-    public DateTime GetDueDate()
+    public string GetDueDate()
     {
-      return _dueDate;
+      var dueDateToString = _dueDate.ToString("D");
+      return dueDateToString;
     }
 
     public void SetDueDate(DateTime dueDate)
